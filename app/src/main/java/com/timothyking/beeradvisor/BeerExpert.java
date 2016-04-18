@@ -8,22 +8,27 @@ import java.util.List;
 public class BeerExpert {
     List<String> getBrands(String color) {
         List<String> brands = new ArrayList<String>();
-        if (color.equals("Amber")) {
-            brands.add("Jack Amber");
-            brands.add("Red Moose");
-            brands.add("Yo Mamma");
-        } else if (color.equals("Orange")) {
-            brands.add("Blue (yuck) Moon");
-            brands.add("IPA");
-        } else if (color.equals("Light")) {
-            brands.add("Coors");
-            brands.add("Miller");
-        } else if (color.equals("Dark")) {
-            brands.add("Guiness");
-            brands.add("Negra Modelo");
-        } else {
-            brands.add("Jail Pale Ale");
-            brands.add("Gout Stout");
+        switch (color) {
+            case "Amber":
+                brands.add("Jack Amber");
+                brands.add("Red Moose");
+                brands.add("Yo Mamma");
+                break;
+            case "Orange":
+                brands.add("Blue (yuck) Moon");
+                brands.add("IPA");
+                break;
+            case "Light":
+                brands.add("Coors");
+                brands.add("Miller");
+                break;
+            case "Dark":
+                brands.add("Guiness");
+                brands.add("Negra Modelo");
+                break;
+            default:
+                brands.add("Jail Pale Ale");
+                brands.add("Gout Stout");
         }
         return brands;
     }
